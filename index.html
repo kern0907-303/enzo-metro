@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台北捷運電聯車數位展覽館 | Taipei MRT Rolling Stock Exhibition</title>
+    <meta name="description" content="本網站展示台北捷運高運量與中運量電聯車技術細節，包含 VAL256、C321、C371、C381 的歷史背景與機電系統，並提供互動式方正車頭辨識指南，解析 C301、C321、C371 等車型的外觀微小差異。支援切換兒童探索版。">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">METRO</span>TECH
+            </a>
+            
+            <!-- Global Mode Toggle (Adult/Kids) -->
+            <button id="modeToggle" class="mode-toggle-btn" aria-label="Toggle explorer mode">
+                <span class="mode-icon">🐣</span>
+                <span class="mode-text">切換至兒童探索版</span>
+            </button>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active">首頁</a></li>
+                    <li><a href="#val256" class="nav-link">VAL256</a></li>
+                    <li><a href="#c301" class="nav-link">C301</a></li>
+                    <li><a href="#c321" class="nav-link">C321</a></li>
+                    <li><a href="#c371" class="nav-link">C371</a></li>
+                    <li><a href="#c381" class="nav-link">C381</a></li>
+                    <li><a href="#identifier" class="nav-link">車頭辨識指南</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-bg" style="background-image: linear-gradient(180deg, rgba(0, 15, 20, 0.8) 0%, rgba(0, 15, 20, 0.95) 100%), url('assets/c381.png');"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tag">SIEMENS DESIGN INSPIRATION</div>
+                <h1>開創城市軌道交通新紀元</h1>
+                
+                <!-- Dual Text for Hero Subtitle -->
+                <p class="text-adult">探索台北捷運電聯車的工程美學、技術演進與歷史故事。從早期的法國馬特拉中運量系統，到西門子模組化地鐵，再到台日合作的最新旗艦機型，全方位解密城市脈搏的移動科技。</p>
+                <p class="text-kids">歡迎來到捷運小勇士探索館！你知道天天載我們去上課的捷運火車，背後藏著多少超酷的科技魔法嗎？這裡有會唱歌的火車、換過大腦的橡皮擦輪胎車，還有台灣和日本叔叔聯手做的大火車，快點進來一起冒險吧！🐣</p>
+                
+                <div class="hero-actions">
+                    <a href="#identifier" class="btn btn-primary">
+                        <span class="text-adult">開始學習辨識車頭</span>
+                        <span class="text-kids">玩車頭捉迷藏遊戲</span>
+                    </a>
+                    <a href="#val256" class="btn btn-secondary">
+                        <span class="text-adult">瀏覽車型技術</span>
+                        <span class="text-kids">看超酷小火車</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">載客營運載具史</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">80 <small>km/h</small></span>
+                    <span class="stat-label">設計最高時速</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">750 <small>V</small></span>
+                    <span class="stat-label">第三軌供電系統</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>
+                <span class="text-adult">往下探索</span>
+                <span class="text-kids">滑鼠滑下去</span>
+            </span>
+            <div class="mouse-icon">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- VAL256 Section -->
+        <section class="train-section val256-theme" id="val256">
+            <div class="container">
+                <div class="train-grid">
+                    <div class="train-visual">
+                        <div class="image-wrapper">
+                            <img src="assets/val256.png" alt="台北捷運 VAL256 中運量電聯車" class="train-img">
+                            <div class="image-overlay"></div>
+                            <div class="model-badge">VAL256</div>
+                        </div>
+                        <div class="tech-spec-summary">
+                            <div class="tech-pill text-adult">法國馬特拉 MATRA</div>
+                            <div class="tech-pill text-kids">來自法國 🇫🇷</div>
+                            
+                            <div class="tech-pill text-adult">中運量膠輪</div>
+                            <div class="tech-pill text-kids">大橡膠輪胎 🛞</div>
+                            
+                            <div class="tech-pill text-adult">無人自動駕駛</div>
+                            <div class="tech-pill text-kids">無人自動駕駛 🤖</div>
+                        </div>
+                        <!-- Running Video Space -->
+                        <div class="video-container">
+                            <div class="video-title">
+                                <span class="text-adult">VAL256 列車運行影片</span>
+                                <span class="text-kids">🎬 VAL256 帥氣火車跑跑影片</span>
+                            </div>
+                            <div class="video-wrapper">
+                                <video controls src="assets/VAL256.mp4" class="train-video"></video>
+                            </div>
+                            <div class="video-caption">影片提供 Air& Rail TRAVEL</div>
+                        </div>
+                    </div>
+                    <div class="train-info">
+                        <div class="section-tag">
+                            <span class="text-adult">VAL256 (法國馬特拉)</span>
+                            <span class="text-kids">棕線橡皮擦小火車 🛞</span>
+                        </div>
+                        <h2>
+                            <span class="text-adult">台北捷運首款無人駕駛中運量先鋒</span>
+                            <span class="text-kids">沒有司機叔叔自己跑的小先鋒</span>
+                        </h2>
+                        
+                        <div class="tabs-container">
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" data-tab="val-history">歷史背景</button>
+                                <button class="tab-btn" data-tab="val-specs">車體諸元</button>
+                                <button class="tab-btn" data-tab="val-system">機電與推進</button>
+                            </div>
+                            
+                            <!-- VAL History Tab -->
+                            <div class="tab-content active" id="val-history">
+                                <!-- Adult Text -->
+                                <ul class="timeline-bullets text-adult">
+                                    <li><strong>1980年 規劃始動：</strong>台北市著手規劃捷運，將首條路線命名為「木柵線」，並前瞻性地決定採用無人自動駕駛系統。</li>
+                                    <li><strong>馬特拉中標：</strong>由法國馬特拉 (MATRA) 成功得標，展開車輛規劃與製造。</li>
+                                    <li><strong>1996年3月28日 正式通車：</strong>木柵線正式通車，成為全台灣第一條捷運路線。</li>
+                                    <li><strong>營運初期的嚴峻挑戰：</strong>通車前後曾發生兩次火燒車事件與爆胎。主因是合約原規劃採「2節一組」營運，台北捷運為提升運量改為「4節一組」（重聯運轉），導致自動控制訊號不一致，煞車系統亦無法同步。</li>
+                                    <li><strong>1997年 合約爭議對簿公堂：</strong>馬特拉公司與台北市政府發生合約糾紛，撤離所有在台技術人員，並終止提供零件與技術支援。當時台北市長陳水扁留下名言：<em>「馬特拉不拉，我們自己拉！」</em></li>
+                                    <li><strong>逆向工程展現韌性：</strong>台灣工程師與技術小組透過逆向工程自行開發到站顯示器，並在光華商場等電子市場尋找替代零件，成功維持系統穩定營運。</li>
+                                    <li><strong>推進系統國產化更新：</strong>因原廠 BJT 功率元件停產，台北捷運於 2005 年前後自主研究，以新型推進電路取代舊推進電路，大幅降低故障率，維持高妥善率。</li>
+                                    <li><strong>2009年 號誌更換與「換腦手術」：</strong>內湖線通車，全線更換為加拿大龐巴迪號誌系統。為了讓 VAL256 繼續在新系統上運作，列車經歷了號誌系統改造的「換腦手術」，以相容於 CITYFLO 650 通訊式列車控制技術。</li>
+                                </ul>
+                                
+                                <!-- Kids Text -->
+                                <ul class="timeline-bullets text-kids">
+                                    <li><strong>1980年 決定無人開車：</strong>很久以前，工程師叔叔決定蓋一條叫「木柵線」的捷運，並決定不要司機，讓火車學會自己看路跑！ 🤖</li>
+                                    <li><strong>法國小火車出生：</strong>法國的一家叫做馬特拉的公司做出了這款小火車。它在1996年3月28日通車，是全台灣第一個捷運寶寶喔！ 🇹🇼</li>
+                                    <li><strong>生氣起火與爆胎：</strong>剛通車時它很不乖，發生過兩次冒火和爆胎。因為本來設計是2節車廂，捷運局為了多載人硬把它黏成4節，結果火車的煞車不同步、打架了！ 💥</li>
+                                    <li><strong>不拉我們自己拉！：</strong>1997年外國原廠跟市政府吵架，生氣地把所有修理工程師都帶走，還不賣零件了！當時的市長帥氣地說：『原廠不拉，我們自己拉！』 👨‍🔧</li>
+                                    <li><strong>光華商場尋寶：</strong>勇敢的台灣工程師叔叔跑到台北光華商場找電子零件，自己動手修理小火車，真的把它救活了！ 🔌</li>
+                                    <li><strong>幫小火車裝省電心臟：</strong>因為以前的開車晶片停產了，台灣的專家在2005年幫它做了一款新型的省電晶片(IGBT)，小火車就不再調皮故障了。 💚</li>
+                                    <li><strong>小火車的換腦手術：</strong>2009年，因為整條路線要換成新的電腦控制。工程師幫舊小火車做了一次『換腦大改造』，裝上新的接收器，它就能繼續在新鐵軌上快快樂樂奔跑囉！ 🧠</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- VAL Specs Tab -->
+                            <div class="tab-content" id="val-specs">
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">車體寬度</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">2.56 公尺</span>
+                                            <span class="text-kids">2.56 公尺（小巧身材，比大捷運窄一點）</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">每節車廂尺寸</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">長 13,780 mm × 寬 2,560 mm × 高 3,530 mm</span>
+                                            <span class="text-kids">大概跟一輛長長的公車一樣大</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">車體材質</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">鋁合金玻璃纖維製造</span>
+                                            <span class="text-kids">輕軟鋁金屬 + 堅固玻璃纖維（像穿著防彈衣！） 🛡️</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">車門配置</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">每節車廂 2 扇門，車廂之間「不互通」</span>
+                                            <span class="text-kids">兩邊各有兩扇門，車廂和車廂中間是不通的，不能走來走去喔！ 🚷</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">內部配置</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">座椅採用「非字形」排列，車廂燈光為暖色調</span>
+                                            <span class="text-kids">溫暖的黃色燈光，座位是背對背或面對面坐的</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">載客容量</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">每節車廂約可容納 114 ~ 116 人</span>
+                                            <span class="text-kids">一節車廂可以載 100 多個大小朋友喔！ 🎒</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- VAL System Tab -->
+                            <div class="tab-content" id="val-system">
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">供電系統</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">750V DC 第三軌供電，下接觸型集電靴</span>
+                                            <span class="text-kids">火車是用底下的「電電軌」來喝電的（750伏特，非常危險不可靠近！） ⚡</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">馬達配置</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">每節車廂配置 2 具直流馬達</span>
+                                            <span class="text-kids">每節車廂有 2 個直流大力氣馬達 🐎</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">推進控制</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">早期採電樞斬波器 (BJT)，2005年自行研發更新為 IGBT 電路</span>
+                                            <span class="text-kids">以前是用傳統開關，2005年換了超聰明的電子節能晶片(IGBT)</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">動力性能</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">啟動加速度 4.68 km/h/s，設計極速 80 km/h，營運速度約 70 km/h</span>
+                                            <span class="text-kids">起步非常快！最快可以跟豹一樣跑 80 km/h 🐆</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">行走機構</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">膠輪系統，行駛於專為膠輪設計的有導軌混凝土路面上</span>
+                                            <span class="text-kids">它是用像大卡車一樣的**黑橡膠輪胎**在水泥地上跑，爬坡力一級棒！ 🛞</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </section>
+
+        <!-- C301 Section -->
+        <section class="train-section c301-theme" id="c301">
+            <div class="container">
+                <div class="train-grid">
+                    <div class="train-visual">
+                        <div class="image-wrapper">
+                            <img src="assets/c301.png" alt="台北捷運 C301 高運量電聯車" class="train-img">
+                            <div class="image-overlay"></div>
+                            <div class="model-badge">C301</div>
+                        </div>
+                        <div class="tech-spec-summary">
+                            <div class="tech-pill text-adult">日本川崎重工 & 美國 URC</div>
+                            <div class="tech-pill text-kids">日本設計 + 美國組裝 🇯🇵🇺🇸</div>
+                            
+                            <div class="tech-pill text-adult">全球首創交流馬達車隊</div>
+                            <div class="tech-pill text-kids">全世界第一款交流馬達車 ⚡</div>
+                            
+                            <div class="tech-pill text-adult">經典「飛碟音」歷史車</div>
+                            <div class="tech-pill text-kids">會叫的飛碟火車 🛸</div>
+                        </div>
+                        <!-- Running Video Space -->
+                        <div class="video-container">
+                            <div class="video-title">
+                                <span class="text-adult">C301 列車運行影片</span>
+                                <span class="text-kids">🎬 C301 帥氣火車跑跑影片</span>
+                            </div>
+                            <div class="video-wrapper">
+                                <video controls src="assets/C301.mp4" class="train-video"></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="train-info">
+                        <div class="section-tag">
+                            <span class="text-adult">C301 (川崎重工 / 美國 URC)</span>
+                            <span class="text-kids">淡水信義線的紅線元老老爺爺 👴</span>
+                        </div>
+                        <h2>
+                            <span class="text-adult">台北捷運首款高運量開拓先鋒</span>
+                            <span class="text-kids">台灣第一台載人滿滿跑的鋼軌大捷運</span>
+                        </h2>
+                        
+                        <div class="tabs-container">
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" data-tab="c301-history">歷史背景</button>
+                                <button class="tab-btn" data-tab="c301-specs">車體諸元</button>
+                                <button class="tab-btn" data-tab="c301-system">推進與機電</button>
+                            </div>
+                            
+                            <!-- C301 History Tab -->
+                            <div class="tab-content active" id="c301-history">
+                                <!-- Adult Text -->
+                                <ul class="timeline-bullets text-adult">
+                                    <li><strong>1989年12月20日 正式開工：</strong>合約總工程金額約為新台幣 45 億元。由日本川崎重工與其美國子公司美國聯合鐵路機車集團 (URC) 共同打造。</li>
+                                    <li><strong>尚未營運先環遊世界：</strong>因受到美國貿易法第301條款限制，合約規定列車必須在美國東岸進行組裝。車廂在紐約州揚克斯 (Yonkers) 的工廠組裝，這也是該工廠首次出口列車車廂。列車先在日本設計，再運至美國組裝，最後運回台灣，因而得名。</li>
+                                    <li><strong>交流馬達先驅：</strong>C301 是全世界第一款全車隊採用交流 (AC) 感應馬達的城市捷運列車，相較於早期直流馬達，具有高效率、低維護與高可靠度。</li>
+                                    <li><strong>經典「飛碟音」：</strong>早期使用美國西屋電機機電系統（GTO 晶閘管），在進出站時會發出獨特的多段式變頻聲音，被鐵道迷生動地形容為「飛碟音」。</li>
+                                    <li><strong>2012年設備大翻修：</strong>因西屋電機零組件停產老化，推進系統更換為龐巴迪製造的 MITRAC TC1410 系列 IGBT 變流模組。更新後「飛碟音」消失，取而代之的是較安靜平穩的行走音。</li>
+                                    <li><strong>性能與舒適度提升：</strong>更換龐巴迪系統後，列車起步與煞車更為和緩，改善了起步頓挫或停車頓挫感。驅動單元具有有效的電力管理與回生煞車功能。</li>
+                                </ul>
+                                
+                                <!-- Kids Text -->
+                                <ul class="timeline-bullets text-kids">
+                                    <li><strong>坐船環遊世界的捷運老爺爺：</strong>1989年開工，花費了45億台幣！因為當時的法律規定，它的零件在日本設計，卻要坐大船去美國紐約的工廠組裝，最後再坐船運回台灣。還沒開始載客人，它就已經環遊世界一整圈啦！ 🚢🌎</li>
+                                    <li><strong>全世界第一款交流馬達車：</strong>它是全世界第一款全部車廂都裝交流電馬達的大捷運！比起以前的舊馬達，它的馬達更厲害、不容易生病，力氣超級大！ 💪</li>
+                                    <li><strong>會叫的飛碟捷運：</strong>以前開動的時候，它的馬達會發出「嗡嗡嗡」像太空飛碟降落的奇妙聲音，大家都叫它飛碟捷運！ 🛸</li>
+                                    <li><strong>2012年心臟大變身：</strong>因為零件太老了，2012年時叔叔幫它換了龐巴迪新心臟(IGBT)。雖然換完後好聽的飛碟唱歌聲不見了，變得很安靜，但是坐起來更舒服、更不會震動囉！ 🤫</li>
+                                    <li><strong>煞車還能發電：</strong>它有省電的綠色魔法，煞車時會把煞車力氣轉成電送回軌道，分給旁邊跑的其他小火車用，非常愛護地球！ ⚡</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- C301 Specs Tab -->
+                            <div class="tab-content" id="c301-specs">
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">製造商</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">日本川崎重工 & 美國聯合鐵路機車集團 (URC)</span>
+                                            <span class="text-kids">日本川崎重工設計 + 美國工廠組裝（台美日合作） 🇯🇵🇺🇸</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">車體材質</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">不鏽鋼車體，堅固耐用</span>
+                                            <span class="text-kids">不生鏽的堅固白鐵身體</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">馬達配備</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">美國西屋電氣製造鼠籠式三相異步感應馬達</span>
+                                            <span class="text-kids">美國西屋大馬達（每具145千瓦，力大無窮） 🐎</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">車組編組</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">6節編組 (4M2T)</span>
+                                            <span class="text-kids">6節大車廂，一起手牽手跑 6️⃣</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">車門安全</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">氣動式車門系統</span>
+                                            <span class="text-kids">氣壓關門時會「嘶——碰！」一聲大吐氣 🚪</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- C301 System Tab -->
+                            <div class="tab-content" id="c301-system">
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">推進變流器 (更新後)</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">龐巴迪 MITRAC TC1410 系列 IGBT 變流模組</span>
+                                            <span class="text-kids">龐巴迪 MITRAC 省電控制箱（換心後非常平穩）</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">智慧大腦</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">MITRAC 系統，整合推進、煞車、車門、空調與旅客資訊</span>
+                                            <span class="text-kids">MITRAC 智慧管理大腦，管冷氣、管車門、管廣播 🧠</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">通訊網絡</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">TCN 架構，包含內部 MVB 匯流排與 WTB 線路列車匯流排</span>
+                                            <span class="text-kids">TCN 列車通訊網路（像火車內部的對講電話線） 📞</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">乙太網路整合</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">引進全球首款 IP 架構 TCMS，頻寬高達 100 Mbit/s，支援車載錄影監視</span>
+                                            <span class="text-kids">全球第一台裝有超高速網路的捷運，車廂內有錄影鏡頭保護大家 🎥</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">自我診斷</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">內建 BITE 一自我測試與診斷系統，即時可視化故障訊息</span>
+                                            <span class="text-kids">裝有神奇診斷機，哪裡痛痛自己用螢幕秀給修理叔叔看 🩺</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- C321 Section -->
+        <section class="train-section c321-theme" id="c321">
+            <div class="container">
+                <div class="train-grid reverse">
+                    <div class="train-visual">
+                        <div class="image-wrapper">
+                            <img src="assets/c321.png" alt="台北捷運 C321 高運量電聯車" class="train-img">
+                            <div class="image-overlay"></div>
+                            <div class="model-badge">C321</div>
+                        </div>
+                        <div class="tech-spec-summary">
+                            <div class="tech-pill text-adult">德國西門子 SIEMENS</div>
+                            <div class="tech-pill text-kids">德國出身 🇩🇪</div>
+                            
+                            <div class="tech-pill text-adult">高運量鋼軌</div>
+                            <div class="tech-pill text-kids">鋼鐵大軌道 🛤️</div>
+                            
+                            <div class="tech-pill text-adult">波爾舍工作室外觀監修</div>
+                            <div class="tech-pill text-kids">超跑保時捷同款設計 🏎️</div>
+                        </div>
+                        <!-- Running Video Space -->
+                        <div class="video-container">
+                            <div class="video-title">
+                                <span class="text-adult">C321 列車運行影片</span>
+                                <span class="text-kids">🎬 C321 帥氣火車跑跑影片</span>
+                            </div>
+                            <div class="video-wrapper">
+                                <video controls src="assets/C321.mp4" class="train-video"></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="train-info">
+                        <div class="section-tag">
+                            <span class="text-adult">C321 (德國西門子)</span>
+                            <span class="text-kids">藍線會唱歌的保時捷捷運 🎵</span>
+                        </div>
+                        <h2>
+                            <span class="text-adult">板南線東西向運輸的核心主力</span>
+                            <span class="text-kids">每天在地下跑、最有力氣的大鐵車</span>
+                        </h2>
+                        
+                        <div class="tabs-container">
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" data-tab="c321-history">歷史背景</button>
+                                <button class="tab-btn" data-tab="c321-specs">車體構造</button>
+                                <button class="tab-btn" data-tab="c321-system">機電系統</button>
+                            </div>
+                            
+                            <!-- C321 History Tab -->
+                            <div class="tab-content active" id="c321-history">
+                                <!-- Adult Text -->
+                                <ul class="timeline-bullets text-adult">
+                                    <li><strong>1999-2000 東西向大動脈通車：</strong>板南線作為第一條東西向路線通車，旨在與南北向路網及木柵線交會。1999年聖誕夜「市政府－西門」、龍山寺等通車，並陸續於 2000~2015 年間向兩端延伸至昆陽、頂埔。</li>
+                                    <li><strong>西門子德國製造：</strong>列車由德國西門子製造，於1998至1999年組裝生產，總計36列（216輛）。其中108輛採技術轉移，由台灣中國鋼鐵公司進行組裝。</li>
+                                    <li><strong>Porsche Design 外觀監修：</strong>外觀概念源自90年代末期西門子推行的模組化地鐵設計，並由知名的波爾舍設計工作室 (Porsche Design Studio) 參與美學監修。</li>
+                                    <li><strong>車體材料風波：</strong>車體為不鏽鋼，但因製造商使用了次級材料，在撞擊測試時發生嚴重變形。西門子工程師隨後進行補強加料，導致 C321 車重大幅增加，且表面較為霧白，這也使其與川崎重工的亮灰色車體有明顯差別。</li>
+                                    <li><strong>營運調度調回板南線：</strong>初期分散配置於中和線、新店線與淡水線，後因高架段煞車不一致且雨天易打滑，加上維修調度考量，於 2009 年全數集中移交至板南線專責營運。</li>
+                                    <li><strong>推進系統更新計畫：</strong>由於已營運逾20年，目前正由台灣車輛公司承接推進系統更新，將舊型 GTO-VVVF 逐步汰換為瑞士 ABB 製造的 BORDLINE CG750 系列 IGBT-VVVF 牽引系統。</li>
+                                </ul>
+                                
+                                <!-- Kids Text -->
+                                <ul class="timeline-bullets text-kids">
+                                    <li><strong>大動脈通車：</strong>1999年的聖誕夜，載大家去台北東區和西門町的板南線捷運通車啦！ 🎅</li>
+                                    <li><strong>德國血統+超跑設計：</strong>它是德國西門子公司做的，而且外表是由設計「保時捷超跑」的設計師設計的喔！所以車頭看起來超級帥氣！ 🏎️</li>
+                                    <li><strong>火車吃太胖了：</strong>它是用不會生鏽的白鐵（不鏽鋼）做的。但以前測試時車體有些變形，所以工程師幫它加了厚厚的鋼板，結果讓它變得比別台車還要胖、還要重！ 🐘</li>
+                                    <li><strong>雨天怕滑倒，搬家到地下：</strong>它以前在外面高架橋上跑，下雨天煞車容易打滑。所以2009年時，長官決定讓它全部「搬家」到地底下的板南線，就不怕淋雨滑倒囉！ 🌧️</li>
+                                    <li><strong>幫老火車換心臟：</strong>這台小火車已經在地下辛辛苦苦跑了20幾年了。工程師叔叔現在正在幫它進行心臟更新（換上瑞士ABB的新晶片），讓它更有活力、更安全！ 🇨🇭</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- C321 Specs Tab -->
+                            <div class="tab-content" id="c321-specs">
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">編組型式</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">4M2T（4節動力車，2節拖車，共6節編組）</span>
+                                            <span class="text-kids">6節車廂在一起，有4節會出力，2節被拉著跑 6️⃣</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">車體材質</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">補強型不鏽鋼車體，自重大幅增加</span>
+                                            <span class="text-kids">加厚型亮晶晶白鐵（不鏽鋼）</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">內裝飾板</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">全白色玻璃纖維強化塑膠 (FRP) 面板，質感潔白</span>
+                                            <span class="text-kids">車廂裡面的牆壁是雪白色的，非常乾淨亮眼 ❄️</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">轉向架</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">德國原廠 SF 2000 型轉向架</span>
+                                            <span class="text-kids">德國做的輪胎架子（轉向架），讓火車轉彎不跌倒</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">安全結構改良</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">2003年發生齒輪箱脫軌事件後，西門子強化了扭力臂結構，增加托耳厚度並強化螺栓強度</span>
+                                            <span class="text-kids">2003年輪子零件曾經掉下來過，後來德國專家用粗螺絲加強固定，現在超安全！</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- C321 System Tab -->
+                            <div class="tab-content" id="c321-system">
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">推進系統 (更新前)</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">西門子 G750 D550/600 M5-1 GTO-VVVF 變流器</span>
+                                            <span class="text-kids">會唱歌的西門子 GTO 電子喉嚨 🎵</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">推進系統 (更新中)</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">瑞士 ABB BORDLINE CG750 IGBT-VVVF 系統</span>
+                                            <span class="text-kids">正升級為瑞士製造的新心臟，變得很安靜</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">牽引馬達</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">西門子 1TB2013 系列三相異步感應馬達（單具 230kW，整列共 3680 kW）</span>
+                                            <span class="text-kids">西門子大馬達，總共3680千瓦（有 5000 隻馬的力量！） 🐎</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">煞車系統</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">再生電力煞車與踏面碟式摩擦煞車聯合運作</span>
+                                            <span class="text-kids">煞車時會把電還給軌道，並搭配像腳踏車一樣的碟盤夾住煞車</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">煞車重製計畫</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">針對 113-118 年原廠已停產且老化的電控單元 (BWC) 及空壓機 (CP) 進行全新氣控與感測器更新</span>
+                                            <span class="text-kids">113-118年正把舊氣動煞車換成全新電子氣控，煞車更靈敏</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">輔助電力</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">750V DC 轉 380V AC (三相) 與 110V DC 控制電源</span>
+                                            <span class="text-kids">把軌道的電轉成 380伏特 的冷氣電，讓車廂涼呼呼 ❄️</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- C371 Section -->
+        <section class="train-section c371-theme" id="c371">
+            <div class="container">
+                <div class="train-grid">
+                    <div class="train-visual">
+                        <div class="image-wrapper">
+                            <img src="assets/c371.png" alt="台北捷運 C371 高運量電聯車" class="train-img">
+                            <div class="image-overlay"></div>
+                            <div class="model-badge">C371</div>
+                        </div>
+                        <div class="tech-spec-summary">
+                            <div class="tech-pill text-adult">日本川崎重工 & 台灣車輛</div>
+                            <div class="tech-pill text-kids">日本設計 + 台灣組裝 🇯🇵🇹🇼</div>
+                            
+                            <div class="tech-pill text-adult">高運量鋼軌</div>
+                            <div class="tech-pill text-kids">鋼鐵軌道 🛤️</div>
+                            
+                            <div class="tech-pill text-adult">台日合作國產化代表</div>
+                            <div class="tech-pill text-kids">台灣製造驕傲 🛠️</div>
+                        </div>
+                        <!-- Running Video Space -->
+                        <div class="video-container">
+                            <div class="video-title">
+                                <span class="text-adult">C371 列車運行影片</span>
+                                <span class="text-kids">🎬 C371 帥氣火車跑跑影片</span>
+                            </div>
+                            <div class="video-wrapper">
+                                <video controls src="assets/C371.mp4" class="train-video"></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="train-info">
+                        <div class="section-tag">
+                            <span class="text-adult">C371 (川崎重工 / 台灣車輛)</span>
+                            <span class="text-kids">綠線/橘線的台灣組裝小國產 🇹🇼</span>
+                        </div>
+                        <h2>
+                            <span class="text-adult">台北捷運高運量國產化里程碑</span>
+                            <span class="text-kids">台灣工程師叔叔親手組裝的大捷運</span>
+                        </h2>
+                        
+                        <div class="tabs-container">
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" data-tab="c371-history">歷史背景</button>
+                                <button class="tab-btn" data-tab="c371-specs">推進與控制</button>
+                                <button class="tab-btn" data-tab="c371-system">安全與設備</button>
+                            </div>
+                            
+                            <!-- C371 History Tab -->
+                            <div class="tab-content active" id="c371-history">
+                                <!-- Adult Text -->
+                                <ul class="timeline-bullets text-adult">
+                                    <li><strong>2003年 招擺始動：</strong>台北捷運為新莊線、蘆洲線、南港線東延段以及小碧潭支線的運量需求進行321輛電聯車招標（非 C321 型），競標廠商有加拿大龐巴迪、德國西門子與日本川崎重工，最後由川崎重工中標。</li>
+                                    <li><strong>台日合作與工業合作企劃 (ICP)：</strong>製造過程體現了台灣推動的工業合作企劃。列車分為 3 系（日本川崎兵庫工廠製造原型）與 4 系（台灣車輛公司負責組裝）兩個工程階段製作。</li>
+                                    <li><strong>3系製造 (2005-2007)：</strong>川崎重工負責，2005年11月在日本兵庫舉行出廠典禮，同年12月運抵台灣。此批次包含新北投和小碧潭支線專用的 3 節編組列車。</li>
+                                    <li><strong>4系本土製造 (2008-2009)：</strong>C371 是台灣車輛公司首度參與生產的捷運車型，實現了鋼鐵下料、總組立等本土化生產，於 2010 年 1 月全數完工。</li>
+                                    <li><strong>2006年7月22日 支線營運：</strong>3節編組列車首度投入新北投支線與小碧潭支線營運。</li>
+                                    <li><strong>2006年8月22日 主線啟動：</strong>6節編組的主線列車開始在淡水新店線服務，逐步取代原有的 C321 型（後者全數移往板南線）。</li>
+                                    <li><strong>現行配屬路線：</strong>3系列車目前主要行駛於松山新店線；4系列車則配屬在蘆洲、中和及新莊機廠，主要行駛於中和新蘆線。</li>
+                                </ul>
+                                
+                                <!-- Kids Text -->
+                                <ul class="timeline-bullets text-kids">
+                                    <li><strong>大火車招標比賽：</strong>2003年，台北捷運要為好多新路線買火車。加拿大、德國、日本的公司一起來比賽，最後日本川崎重工贏了！ 🏆</li>
+                                    <li><strong>台灣第一次做大捷運：</strong>這批車非常特別，因為日本把做火車的魔法交給台灣！這台車是由新竹的「台灣車輛公司」第一次自己組裝的喔，是台灣的驕傲！ 🇹🇼</li>
+                                    <li><strong>日本生原型，台灣生寶寶：</strong>前幾台列車（3系）在日本做，做完運到台灣。後面的火車（4系）全都是台灣工人叔叔在台灣組裝的，2010年全數做完！</li>
+                                    <li><strong>小小3節車廂出發：</strong>2006年夏天，只有3節車廂的短捷運開始在新北投和小碧潭跑，超級可愛！ 🚇</li>
+                                    <li><strong>主線大幫忙：</strong>2006年8月，6節長捷運在淡水新店線上班，把舊的西門子火車換去板南線。</li>
+                                    <li><strong>現在在哪裡跑：</strong>日本做的3系列車現在在綠色線（松山新店線）跑；台灣做的4系列車則配屬在橘色線（中和新蘆線），載大家上下學！ 🧡💚</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- C371 Specs Tab -->
+                            <div class="tab-content" id="c371-specs">
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">推進變頻器</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">三菱電機 IGBT-VVVF 變頻器（三相電壓型 PWM 變流器）</span>
+                                            <span class="text-kids">日本三菱製造的超靜音電子心臟(IGBT) 🇯🇵</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">牽引馬達</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">三菱電機 MB-5113-A 交流感應馬達（每具功率 175 kW）</span>
+                                            <span class="text-kids">三菱強力馬達（一節車廂有 240 匹馬的力氣！）</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">驅動與傳動</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">三菱電機 WN 傳動器，齒輪比設定為 6.31</span>
+                                            <span class="text-kids">齒輪傳動比是 6.31，加速超平穩</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">供電電壓</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">DC 750V，道旁第三軌供電</span>
+                                            <span class="text-kids">750伏特直流電，也是吸底下的軌道電</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">輔助電源 (SIV)</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">三菱電機 PWM IGBT 靜態換流器，DC 750V 轉 AC 380V（供應空調與照明）</span>
+                                            <span class="text-kids">把高壓電轉成家用 380伏特，吹冷氣和點亮燈泡 💡</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">電池系統</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">配備專用電池充電器，維持列車輔助電源電池電力</span>
+                                            <span class="text-kids">有大顆的備用電池，就算突然停電也能維持呼吸燈光</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- C371 System Tab -->
+                            <div class="tab-content" id="c371-system">
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">監控與保安系統 (TCMS)</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">三菱電機製造，容量大升至 57 小時（C301僅24小時），能更強力記錄運轉資訊</span>
+                                            <span class="text-kids">火車的**「超級大腦記憶體」**，可以連續記住 57 小時的事情！誰生病了大腦馬上知道 🧠</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">行車防護系統</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">配備 ATC（自動列車控制）、ATP（自動列車防護）並支援 ATO（自動列車駕駛）</span>
+                                            <span class="text-kids">裝有自動限速防撞和自動開車系統，是司機叔叔的超強助手 🛡️</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">軔機（煞車）系統</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">日本 Nabtesco 提供，具備再生電軔、電阻電軔及電控氣軔（優先使用再生電軔）</span>
+                                            <span class="text-kids">聰明煞車！優先用馬達吸電減速，把剩餘的電回收給其他火車用 ⚡</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">空氣壓縮機</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">螺旋式空氣壓縮機，排氣量達 1,570 L/min</span>
+                                            <span class="text-kids">像旋風一樣的大打氣機，幫煞車系統提供滿滿氣力</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">車門系統改良</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">由 C301/C321 的氣壓門升級為雙開式「電動馬達門機」，開關平順，緊急旋鈕可同步打開同側所有車門</span>
+                                            <span class="text-kids">重大發明！改成**溫柔的電動車門**，再也沒有舊車「嘶——碰！」的排氣巨響，開關超安靜！ 🚪</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">空調設備</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">分離式空調系統（無暖氣功能）</span>
+                                            <span class="text-kids">大冷氣系統（但因為台灣很熱，所以沒有裝暖氣功能） 🥵</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- C381 Section -->
+        <section class="train-section c381-theme" id="c381">
+            <div class="container">
+                <div class="train-grid">
+                    <div class="train-visual">
+                        <div class="image-wrapper">
+                            <img src="assets/c381.png" alt="台北捷運 C381 高運量電聯車" class="train-img">
+                            <div class="image-overlay"></div>
+                            <div class="model-badge">C381</div>
+                        </div>
+                        <div class="tech-spec-summary">
+                            <div class="tech-pill text-adult">日本川崎重工 & 台灣車輛</div>
+                            <div class="tech-pill text-kids">日本川崎 + 新竹台車組裝 🇯🇵🇹🇼</div>
+                            
+                            <div class="tech-pill text-adult">流線型新世代車頭</div>
+                            <div class="tech-pill text-kids">子彈流線型帥氣臉蛋 🚄</div>
+                            
+                            <div class="tech-pill text-adult">TCMS 智慧列車監控</div>
+                            <div class="tech-pill text-kids">18天超強大腦記憶 🧠</div>
+                        </div>
+                        <!-- Running Video Space -->
+                        <div class="video-container">
+                            <div class="video-title">
+                                <span class="text-adult">C381 列車運行影片</span>
+                                <span class="text-kids">🎬 C381 帥氣火車跑跑影片</span>
+                            </div>
+                            <div class="video-wrapper">
+                                <video controls src="assets/C381.mp4" class="train-video"></video>
+                            </div>
+                            <div class="video-caption">影片提供 匿銘とくメイ</div>
+                        </div>
+                    </div>
+                    <div class="train-info">
+                        <div class="section-tag">
+                            <span class="text-adult">C381 (川崎重工 / 台灣車輛)</span>
+                            <span class="text-kids">紅線最新的流線子彈捷運 🚄</span>
+                        </div>
+                        <h2>
+                            <span class="text-adult">台北捷運最新銳的流線型主力艦</span>
+                            <span class="text-kids">目前捷運家族裡最帥氣的流線型火車</span>
+                        </h2>
+                        
+                        <div class="tabs-container">
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" data-tab="c381-history">歷史背景</button>
+                                <button class="tab-btn" data-tab="c381-specs">推進與傳動</button>
+                                <button class="tab-btn" data-tab="c381-system">電控與輔助</button>
+                            </div>
+                            
+                            <!-- C381 History Tab -->
+                            <div class="tab-content active" id="val-history">
+                                <!-- Adult Text -->
+                                <ul class="timeline-bullets text-adult">
+                                    <li><strong>信義松山線增備：</strong>針對信義線（CR381標 13列）與松山線（CG391標 10列）運量需求而採購，後因板南線延伸頂埔增購1列，共計24列（144輛）。解決了因 C321/C301 移交所留下的運力空缺。</li>
+                                    <li><strong>2014年 直通運轉結束：</strong>2013年信義線通車、2014年底淡水新店線直通模式走入歷史。淡水線正式與信義線連接，形成現今的「淡水信義線」與「松山新店線」，C381 即為這兩條路線的代表車款。</li>
+                                    <li><strong>C371型的強力後援：</strong>C381 與前代 C371 零件高度相容（達50%），駕駛室、機電與旅客介面等可直接互通。</li>
+                                    <li><strong>台日合作 國車國造：</strong>首6列由日本川崎重工製造，其餘18列（108輛）技術轉移至新竹「台灣車輛公司」組裝生產。第一列於 2010 年抵台測試，並於 2012 年 10 月 7 日正式投入營運。</li>
+                                </ul>
+                                
+                                <!-- Kids Text -->
+                                <ul class="timeline-bullets text-kids">
+                                    <li><strong>新路線需要帥哥：</strong>2007年，為即將蓋好的信義線（紅線）和松山線（綠線），捷運局又跟日本川崎還有新竹的台灣工廠買了24台超級帥的新捷運！</li>
+                                    <li><strong>紅綠大合體：</strong>2014年底，以前淡水直通新店的模式結束了，紅線和綠線各自獨立，C381 便成為「淡水信義線」和「松山新店線」上的常客明星！ 🌟</li>
+                                    <li><strong>前輩的超級好朋友：</strong>它跟上一代 C371 是很好的麻吉，有一半的零件是可以互相拆下來借給對方用的，超級方便！ 🤝</li>
+                                    <li><strong>同樣是台日混血：</strong>前 6 台在日本做好坐船來台灣，剩下的 18 台也是在我們新竹的工廠完成組裝的。2012年10月7日第一列正式載客出發！ 🚢</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- C381 Specs Tab -->
+                            <div class="tab-content" id="c381-specs">
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">推進變流器</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">三菱電機 IGBT-VVVF 變流器 (MAP-184-75VD139A)</span>
+                                            <span class="text-kids">最新款三菱電機高頻變頻心臟(IGBT)</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">牽引馬達</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">三菱電機 MB-5113-A2 開放式三相感應馬達（單具 175kW，整列共 2,800 kW）</span>
+                                            <span class="text-kids">安靜馬達，總輸出 2800 千瓦（相當於 3800 匹馬同時奔跑！） 🐎</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">傳動機構</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">WN 聯軸器傳動 (WN-1601-AF2)，齒輪比 6.31</span>
+                                            <span class="text-kids">齒輪箱滾動更滑順，幾乎沒有噪音</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">集電系統</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">轉向架兩側下抵觸式集電靴，輸入 750V DC 直流電</span>
+                                            <span class="text-kids">用輪子旁邊的「吸電靴」去碰旁邊軌道的 750V 直流電</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">煞車系統</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">回生煞車 + 電阻煞車 + 電控氣軔；配備 Nabtesco 碟式摩擦煞車</span>
+                                            <span class="text-kids">最新日本 Nabtesco 碟煞，減速滑順又穩當，站著的人都不會倒！ 🛑</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- C381 System Tab -->
+                            <div class="tab-content" id="c381-system">
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">列車監控與保安</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">三菱電機製造 TCMS，記憶體容量提升至 18 天份（前代為 3 天），大幅提升維修判讀力</span>
+                                            <span class="text-kids">**「神盾大腦系統」(TCMS)**：記憶體超大，能記住 18 天內發生的所有大小事，是維修叔叔的得力助手 🧠</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">車門系統</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">雙開式電動線性馬達機，具備敏感的阻礙檢測及自動重開功能</span>
+                                            <span class="text-kids">**神奇避夾車門**：如果背包或手腳被門夾到，門會「嗶嗶嗶」像碰到彈簧一樣自己彈開喔！ 🚪</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">輔助電力系統</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">PWM IGBT 靜態換流器 (750V DC 轉 380V AC 三相)，供應空調、空壓機與照明</span>
+                                            <span class="text-kids">超大換電器，把底下的電轉換給冷氣、車廂燈光和動態螢幕用</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">備用控制電</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">獨立電池充電器，供應全車 110V DC 控制與緊急用電</span>
+                                            <span class="text-kids">備用發電機，隨時充電維持控制螢幕電力</span>
+                                        </span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">連接器</span>
+                                        <span class="spec-value">
+                                            <span class="text-adult">編組兩端採 Tomlison 密著連結器，車廂間採半永久式連結器</span>
+                                            <span class="text-kids">車頭有一個自動連結器，像張開的嘴巴，可以跟別台車牽手親親黏在一起！ 💋</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Square-Front Identifier Section -->
+        <section class="identifier-section" id="identifier">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">
+                        <span class="text-adult">GUIDE & INTERACTION</span>
+                        <span class="text-kids">列車捉迷藏遊戲 🕵️‍♂️</span>
+                    </div>
+                    <h2>
+                        <span class="text-adult">方正車頭捷運列車辨識指南</span>
+                        <span class="text-kids">怎麼認出這三胞胎大捷運？</span>
+                    </h2>
+                    <p class="section-desc">
+                        <span class="text-adult">C301、C321、C371 都是台北捷運經典的方正方頭設計，看起來簡真一模一樣？本單元教您如何運用三大法寶，輕鬆辨認這些捷運列車！</span>
+                        <span class="text-kids">C301、C321、C371 都是方方正正的車頭，看起來就像複製貼上一模一樣？別擔心，小勇士快來學這三招，一秒變捷運大師！</span>
+                    </p>
+                </div>
+
+                <div class="identifier-layout">
+                    <!-- Step 1: The Number Rule -->
+                    <div class="id-card number-rule-card">
+                        <div class="card-num">01</div>
+                        <h3>
+                            <span class="text-adult">終極大絕招：看車廂百位數編號</span>
+                            <span class="text-kids">第一招：尋找車廂上的「密碼數字」</span>
+                        </h3>
+                        <p class="text-adult">這是不管外觀再像，也絕對不會認錯的官方標誌。在車側車門旁、或是走入車廂內抬頭看，都會看到四位數編號（如 0001 或 1101）。重點就在**第二位數字（百位數）**：</p>
+                        <p class="text-kids">在車廂外面或車廂門上方，都會寫著一串4個數字的車牌（比如 1105 ）。只要看**左邊數來第二個數字**是誰，就絕對不會認錯人！</p>
+                        
+                        <div class="number-rule-grid">
+                            <div class="rule-badge badge-c301">
+                                <span class="badge-num">x0xx</span>
+                                <span class="badge-model">C301 型</span>
+                                <span class="badge-desc text-adult">（美國 URC 製造）</span>
+                                <span class="badge-desc text-kids">第二個數字是 0 (美國老大) 🇺🇸</span>
+                                <audio controls src="assets/C301.m4a" class="rule-audio"></audio>
+                            </div>
+                            <div class="rule-badge badge-c321">
+                                <span class="badge-num">x1xx</span>
+                                <span class="badge-model">C321 型</span>
+                                <span class="badge-desc text-adult">（德國西門子製造）</span>
+                                <span class="badge-desc text-kids">第二個數字是 1 (德國西門子) 🇩🇪</span>
+                                <audio controls src="assets/C321.m4a" class="rule-audio"></audio>
+                            </div>
+                            <div class="rule-badge badge-c371">
+                                <span class="badge-num">x3xx / x4xx</span>
+                                <span class="badge-model">C371 型</span>
+                                <span class="badge-desc text-adult">（日本川崎 / 台灣車輛）</span>
+                                <span class="badge-desc text-kids">第二個數字是 3 或 4 (台日合作) 🇯🇵🇹🇼</span>
+                                <audio controls src="assets/C371.m4a" class="rule-audio"></audio>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Interactive Hotspot Map -->
+                    <div class="id-card hotspot-card">
+                        <div class="card-num">02</div>
+                        <h3>
+                            <span class="text-adult">車身特徵互動標記 (Hotspots)</span>
+                            <span class="text-kids">第二招：大家來找碴！車身小細節</span>
+                        </h3>
+                        <p class="text-adult">點選下方模擬列車的綠色閃爍標記，即可檢視該區域在各型號之間的細微外觀設計差異：</p>
+                        <p class="text-kids">點點看下面圖畫裡的**綠色閃爍小點點**，看看工程師在哪些角落藏了不一樣的小特徵喔！</p>
+                        
+                        <div class="hotspot-diagram-container">
+                            <div class="diagram-wrapper">
+                                <!-- Draw a clean styling wrapper representing train face & side -->
+                                <div class="train-schematic">
+                                    <div class="train-front-view">
+                                        <div class="windshield-area">
+                                            <div class="destination-display">板南線 Bannan Line</div>
+                                        </div>
+                                        <div class="headlight-area"></div>
+                                        <!-- Hotspot 1: Front panel -->
+                                        <div class="hotspot" id="hs-front" data-info="front" style="top: 60%; left: 50%;"></div>
+                                    </div>
+                                    <div class="train-side-view">
+                                        <div class="side-door">
+                                            <div class="door-window"></div>
+                                            <!-- Hotspot 2: Door Light -->
+                                            <div class="hotspot" id="hs-door-light" data-info="door-light" style="top: 25%; left: 35%;"></div>
+                                        </div>
+                                        <div class="side-display-box">
+                                            <!-- Hotspot 3: Side Display -->
+                                            <div class="hotspot" id="hs-side-display" data-info="side-display" style="top: 20%; left: 65%;"></div>
+                                        </div>
+                                        <div class="gangway-bellows">
+                                            <!-- Hotspot 4: Gangway -->
+                                            <div class="hotspot" id="hs-gangway" data-info="gangway" style="top: 50%; left: 95%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="hotspot-info-panel" id="hotspot-info-panel">
+                                <div class="empty-state text-adult">💡 請點擊上方列車的閃爍綠點，探索外觀微小差異！</div>
+                                <div class="empty-state text-kids">💡 快點擊上面的綠色閃爍點，找尋寶藏答案！</div>
+                                <div class="info-content hidden" id="info-content">
+                                    <h4 id="info-title">部位名稱</h4>
+                                    <div class="info-details">
+                                        <div class="info-row">
+                                            <span class="info-model-name">C301 (美製)</span>
+                                            <p id="desc-c301">細節描述</p>
+                                        </div>
+                                        <div class="info-row">
+                                            <span class="info-model-name">C321 (西門子)</span>
+                                            <p id="desc-c321">細節描述</p>
+                                        </div>
+                                        <div class="info-row">
+                                            <span class="info-model-name">C371 (川崎/台車)</span>
+                                            <p id="desc-c371">細節描述</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Sound & Real Photo Playground -->
+                    <div class="id-card media-playground-card">
+                        <div class="card-num">03</div>
+                        <h3>
+                            <span class="text-adult">未來多媒體擴充區 (預留空間)</span>
+                            <span class="text-kids">第三招：聽聲音和看相片（未來擴充區）</span>
+                        </h3>
+                        <p class="text-adult">此處為音頻與相片上傳區，目前無實體檔案，已採用高保真 UI 設計並預留路徑。未來您可將您錄製的運行聲音檔（`.mp3`）及實車拍攝相片（`.jpg`）放入 `assets` 對應資料夾，即可直接啟用。</p>
+                        <p class="text-kids">每一台車開動時的「唱歌聲音」和車門開關聲都不同！這裡預留了放真實火車拍照跟錄音的地方，未來你放進去後就可以直接播放真的聲音囉！ 📸🔊</p>
+                        
+                        <div class="playground-grid">
+                            <!-- C301 Upload Card -->
+                            <div class="upload-card">
+                                <div class="upload-title">C301 老大哥</div>
+                                <div class="photo-placeholder">
+                                    <svg viewBox="0 0 24 24" class="upload-icon"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/></svg>
+                                    <span class="text-adult">[ 請放入相片 assets/c301_real.jpg ]</span>
+                                    <span class="text-kids">[ 請在此上傳 C301 真實相片 📸 ]</span>
+                                </div>
+                                <div class="custom-player mini-player" data-audio="c301">
+                                    <button class="play-btn" aria-label="Play C301 sound">
+                                        <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                        <svg class="pause-icon hidden" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                                    </button>
+                                    <div class="player-info">
+                                        <canvas class="waveform-canvas mini-canvas" id="canvas-c301"></canvas>
+                                        <div class="player-status mini-text">模擬 BJT/IGBT 電磁音 [c301_sound.mp3]</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- C321 Upload Card -->
+                            <div class="upload-card">
+                                <div class="upload-title">C321 唱歌車</div>
+                                <div class="photo-placeholder">
+                                    <svg viewBox="0 0 24 24" class="upload-icon"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/></svg>
+                                    <span class="text-adult">[ 請放入相片 assets/c321_real.jpg ]</span>
+                                    <span class="text-kids">[ 請在此上傳 C321 真實相片 📸 ]</span>
+                                </div>
+                                <div class="custom-player mini-player" data-audio="c321-mini">
+                                    <button class="play-btn" aria-label="Play C321 sound">
+                                        <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                        <svg class="pause-icon hidden" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                                    </button>
+                                    <div class="player-info">
+                                        <canvas class="waveform-canvas mini-canvas" id="canvas-c321-mini"></canvas>
+                                        <div class="player-status mini-text">模擬 Siemens GTO 電磁音 [c321_sound.mp3]</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- C371 Upload Card -->
+                            <div class="upload-card">
+                                <div class="upload-title">C371 溫柔門</div>
+                                <div class="photo-placeholder">
+                                    <svg viewBox="0 0 24 24" class="upload-icon"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/></svg>
+                                    <span class="text-adult">[ 請放入相片 assets/c371_real.jpg ]</span>
+                                    <span class="text-kids">[ 請在此上傳 C371 真實相片 📸 ]</span>
+                                </div>
+                                <div class="custom-player mini-player" data-audio="c371">
+                                    <button class="play-btn" aria-label="Play C371 sound">
+                                        <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                        <svg class="pause-icon hidden" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                                    </button>
+                                    <div class="player-info">
+                                        <canvas class="waveform-canvas mini-canvas" id="canvas-c371"></canvas>
+                                        <div class="player-status mini-text">模擬 三菱 IGBT 電磁音 [c371_sound.mp3]</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo"><span class="logo-accent">METRO</span>TECH</a>
+                <p>致力於傳遞軌道科技知識與捷運工程美學的個人專題網站。</p>
+            </div>
+            <div class="footer-links">
+                <h4>快速導覽</h4>
+                <ul>
+                    <li><a href="#hero">首頁</a></li>
+                    <li><a href="#val256">VAL256</a></li>
+                    <li><a href="#c301">C301</a></li>
+                    <li><a href="#c321">C321</a></li>
+                    <li><a href="#c371">C371</a></li>
+                    <li><a href="#c381">C381</a></li>
+                    <li><a href="#identifier">車頭辨識指南</a></li>
+                </ul>
+            </div>
+            <div class="footer-design">
+                <h4>設計致敬</h4>
+                <p>本站 UI 設計與排版視覺致敬 <strong>Siemens Mobility</strong> 官方設計語彙。</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 台北捷運電聯車數位展覽館. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="main.js"></script>
+</body>
+</html>
