@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initModeToggle();
     initTabs();
-    initHotspots();
     initAudioSynthesizers();
     initScrollAnimations();
 });
@@ -75,11 +74,7 @@ function initModeToggle() {
             modeText.textContent = '切換至兒童探索版';
         }
 
-        // Refresh active hotspot details if any is selected to update its text language
-        const activeHotspot = document.querySelector('.hotspot.active');
-        if (activeHotspot) {
-            activeHotspot.click();
-        }
+
 
         // Trigger resize on canvases because layouts might adjust slightly
         window.dispatchEvent(new Event('resize'));
@@ -116,121 +111,6 @@ function initTabs() {
         });
     });
 }
-
-/* ==========================================================================
-   VISUAL HOTSPOTS GUIDE (Dual content support)
-   ========================================================================== */
-const HOTSPOT_DATA = {
-    'front': {
-        title: {
-            adult: '車頭玻璃纖維 (FRP) 面板與美學',
-            kids: '車頭的「大臉」面板 🎨'
-        },
-        c301: {
-            adult: '美製 C301：原廠前擋泥面磚採用暗灰色 FRP 面板，氣質較為沉穩古樸，金屬烤漆略帶灰白，被視為第一代骨董車特徵。',
-            kids: 'C301 (老大哥爺爺)：車頭的臉是暗暗的灰色，看起來最成熟、最傳統，像一位有學問的捷運老爺爺！ 👴'
-        },
-        c321: {
-            adult: '德製 C321：由 Porsche Design 工作室參與美學監修。前車頭面板改為全亮白色 FRP，相比川崎重工的灰白，西門子的白色非常白淨。',
-            kids: 'C321 (保時捷唱歌車)：由設計保時捷跑車的叔叔設計！車頭是亮晶晶的純白色，像穿了一件乾淨的白襯衫 🤍'
-        },
-        c371: {
-            adult: '日製 C371：川崎重工經典風格，車頭車型與 C301/C321 類似的高階灰色，但在正面兩側貼有路線代表的色帶（如綠/橘等）。',
-            kids: 'C371 (色帶溫柔車)：車頭是亮灰色，但最特別的是它的「臉頰」兩側貼著彩色路線條（像綠色或橘色），告訴你它要去哪裡！ 💚'
-        }
-    },
-    'door-light': {
-        title: {
-            adult: '車側開門指示燈 (Door Indicator Lamp)',
-            kids: '車身關門大探照燈 💡'
-        },
-        c301: {
-            adult: '美製 C301：採用早期傳統的圓形突起白熾燈泡。當列車開門時，燈泡發出黃橙色光芒，並有經典的氣動閥排氣氣流聲。',
-            kids: 'C301 (老大哥爺爺)：是用凸出來的圓形小燈泡，關門時會發出「嘶——碰！」的大噴氣聲，像一頭大恐龍！ 🦕'
-        },
-        c321: {
-            adult: '德製 C321：與 C301 相似，依然是經典圓形白熾燈。由於是氣動門，開關時能聽到明顯的壓縮空氣壓縮聲（嘶—）。',
-            kids: 'C321 (保時捷唱歌車)：也是凸凸的圓形燈泡，用的是氣壓門，關門時同樣會大聲噴氣「嘶——碰！」 💨'
-        },
-        c371: {
-            adult: '日製 C371：全面現代化升級！改用**方形 LED 指示燈**，開門時亮綠色，且改裝無排氣聲的**電動門系統**與專屬警示嗶聲。',
-            kids: 'C371 (色帶溫柔車)：升級成**平平的方形 LED 綠色燈**！而且換成電動門，關門是安靜的「嗶嗶嗶」，非常溫柔 🚪'
-        }
-    },
-    'side-display': {
-        title: {
-            adult: '車側目的地顯示器 (Side Destination Sign)',
-            kids: '車廂側面的大螢幕顯示板 📺'
-        },
-        c301: {
-            adult: '美製 C301：最初出廠沒有配備側邊 LED，僅能依靠車頭的壓克力目的地燈箱。',
-            kids: 'C301 (老大哥爺爺)：以前出廠時車廂側面沒有安裝 LED 電子看板，只能看車頭前方的路線名稱。'
-        },
-        c321: {
-            adult: '德製 C321：由於 90 年代末合約未要求，出廠時同樣沒有配置車側路線顯示幕（部分經後續局部改裝，但絕大多數無）。',
-            kids: 'C321 (保時捷唱歌車)：因為以前的規定，它出生時側面也光溜溜的，沒有電子看板喔。'
-        },
-        c371: {
-            adult: '日製 C371：全面標準配備！車廂側面中央均設有高亮度橘黃色 LED 路線顯示板，即時顯示終點站與下一站名。',
-            kids: 'C371 (色帶溫柔車)：側面安裝了亮晶晶的橘黃色 LED 電子顯示螢幕，會寫著這班車開往哪裡，不怕坐錯車！ 📺'
-        }
-    },
-    'gangway': {
-        title: {
-            adult: '車間通道風擋與走道 (Inter-car Gangway)',
-            kids: '車廂和車廂中間的風箱走廊 🚪'
-        },
-        c301: {
-            adult: '美製 C301：兩節車廂之間連結通道較窄，且早期的內裝橡膠接頭在高速運轉時晃動較大。',
-            kids: 'C301 (老大哥爺爺)：車廂中間的走道比較窄，走過去時晃動比較大，要抓緊扶手喔！ 🤝'
-        },
-        c321: {
-            adult: '德製 C321：採用傳統的窄間距風擋設計。車門玻璃為有稜有角的直角四邊形，與日製的圓角有別。',
-            kids: 'C321 (保時捷唱歌車)：也是窄窄的走廊。但它的車門玻璃是四四方方的直角方形，像切片大吐司！ 🍞'
-        },
-        c371: {
-            adult: '日製 C371：車間走道採用了全寬式的**蛇腹式橡膠褶襠風擋**，兩車廂通道非常寬敞且平整，走廊採圓弧一體感設計。',
-            kids: 'C371 (色帶溫柔車)：通道兩側改裝成像手風琴一樣的**寬寬黑色蛇腹橡膠皮**，走道又寬又平坦，走路好安全！ 🎹'
-        }
-    }
-};
-
-function initHotspots() {
-    const hotspots = document.querySelectorAll('.hotspot');
-    const infoPanel = document.getElementById('hotspot-info-panel');
-    const infoContent = document.getElementById('info-content');
-    const infoTitle = document.getElementById('info-title');
-    const descC301 = document.getElementById('desc-c301');
-    const descC321 = document.getElementById('desc-c321');
-    const descC371 = document.getElementById('desc-c371');
-
-    hotspots.forEach(spot => {
-        spot.addEventListener('click', () => {
-            // Remove active status from other hotspots
-            hotspots.forEach(s => s.classList.remove('active'));
-            spot.classList.add('active');
-
-            const infoKey = spot.getAttribute('data-info');
-            const data = HOTSPOT_DATA[infoKey];
-
-            if (data) {
-                const isKids = document.body.classList.contains('kids-mode');
-                
-                // Update text panel according to active mode
-                infoTitle.textContent = isKids ? data.title.kids : data.title.adult;
-                descC301.textContent = isKids ? data.c301.kids : data.c301.adult;
-                descC321.textContent = isKids ? data.c321.kids : data.c321.adult;
-                descC371.textContent = isKids ? data.c371.kids : data.c371.adult;
-
-                // Hide empty state and show content
-                const emptyStates = infoPanel.querySelectorAll('.empty-state');
-                emptyStates.forEach(es => es.classList.add('hidden'));
-                infoContent.classList.remove('hidden');
-            }
-        });
-    });
-}
-
 /* ==========================================================================
    WEB AUDIO API TRAIN MOTOR SYNTHESIZERS
    ========================================================================== */
