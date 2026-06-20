@@ -418,6 +418,49 @@ body.kids-mode .tech-pill.text-adult {
     color: var(--color-text-muted);
 }
 
+.comparison-card {
+    gap: 16px !important;
+}
+
+.comp-box {
+    background-color: var(--glass-background);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-blur);
+    padding: 24px;
+    border-radius: var(--border-radius-md);
+    flex: 1;
+}
+
+.comp-box h3 {
+    font-size: 1.25rem;
+    color: var(--color-petrol);
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 12px;
+}
+
+.comp-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comp-box li {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.comp-box li:last-child {
+    margin-bottom: 0;
+}
+
+.comp-box strong {
+    color: var(--color-white);
+    font-weight: 600;
+}
+
 .stat-label {
     font-size: 0.85rem;
     color: var(--color-text-muted);
