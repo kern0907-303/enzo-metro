@@ -1533,3 +1533,95 @@ body.kids-mode .tech-pill.text-adult {
     transform: translateY(0);
 }
 
+
+/* ==========================================================================
+   CAPACITY & ROUTE MAP SECTION
+   ========================================================================== */
+.capacity-section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, var(--color-bg) 0%, rgba(13, 27, 42, 0.8) 100%);
+    position: relative;
+}
+
+.capacity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.capacity-card {
+    background-color: var(--glass-background);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-blur);
+    padding: 30px;
+    border-radius: var(--border-radius-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.capacity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.capacity-title {
+    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    color: var(--color-petrol);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--color-petrol);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.capacity-stats {
+    margin: 20px 0;
+}
+
+.capacity-stats strong {
+    color: var(--color-white);
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.capacity-lines {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.capacity-lines p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.map-container {
+    text-align: center;
+    background-color: var(--glass-background);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-blur);
+    padding: 40px;
+    border-radius: var(--border-radius-lg);
+}
+
+.map-container h3 {
+    color: var(--color-white);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.map-image {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1024px) {
+    .capacity-grid {
+        grid-template-columns: 1fr;
+    }
+}

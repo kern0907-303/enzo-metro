@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <title>臺北捷運 | Metro Taipei</title>
+    <base href="/pages/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="~/assets/favoricon.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQZZ7GV317"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CQZZ7GV317');
+    </script>
+<link rel="stylesheet" href="styles.6e267d7aed26567b2aa7.css"></head>
+
+<body>
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/jquery.rwdImageMaps.min.js"></script>
+    <script>
+          (function(i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function() {
+              (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+          a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-2167853-21', 'auto','webmetro');
+      ga('webmetro.send', 'pageview');</script>
+    <app-root></app-root>
+<script src="runtime.689ba4fd6cadb82c1ac2.js" defer></script><script src="polyfills-es5.23903d89ffd193e0c2b0.js" nomodule defer></script><script src="polyfills.55a541187c5fa8e9a5d4.js" defer></script><script src="scripts.13dce7a75a75492d9cf7.js" defer></script><script src="main.2b3324e9309a5f027488.js" defer></script></body>
+
+</html>
